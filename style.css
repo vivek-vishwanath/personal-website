@@ -1,0 +1,125 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", Calibri, sans-serif;    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container layout */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left Tab (TOC) */
+.toc {
+    width: 25%;
+    min-width: 200px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.toc ul {
+    list-style: none;
+}
+
+.toc-item {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.toc-item::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.toc-item:hover {
+    background-color: #ddd;
+}
+
+.toc-item.active {
+    background-color: #6a9fb5;
+    color: white;
+}
+
+.toc-item.active::before {
+    background-color: #6a9fb5;
+}
+/* Progress bar container */
+#progress-bar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #e0e0e0;
+}
+
+/* Progress bar */
+#progress-bar {
+  width: 100%;
+  height: 0;
+  background-color: #4caf50;
+}
+
+/* Main Content */
+.main-content {
+    width: 75%;
+    overflow-y: auto;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 80vh;
+    margin: 16px;
+    padding: 32px;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+/* Progress bar container */
+#progress-bar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background-color: #e0e0e0;
+}
+
+/* Progress bar */
+#progress-bar {
+  width: 100%;
+  height: 0;
+  background-color: #4caf50;
+}
+
