@@ -18,6 +18,39 @@ body {
     height: 100%;
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 96px;
+    margin: 64px 0 32px 64px;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+    padding-top: 16px;
+    font-weight: normal;
+}
+
+h3 {
+    padding-top: 8px;
+    font-weight: normal;
+    font-family: Calibri, serif;
+    font-size: 24px;
+}
+
+.statement {
+    display: flex;          /* Use Flexbox */
+    flex-direction: row;   /* Align children in a row */
+    justify-content: flex-start; /* Align children to the start (left) */
+}
+
 /* Left Tab (TOC) */
 .toc {
     width: 20%;
@@ -61,19 +94,23 @@ body {
 }
 /* Main Content */
 .main-content {
-    width: 75%;
+    width: 100%;
     overflow: auto;
     height: 100vh;
     scroll-behavior: smooth;
 }
 
 section {
-    height: 300vh;
     margin: 16px;
-    padding: 32px;
+    padding: 48px;
     border-radius: 15px;
     background-color: #f4f4f4;
     border-bottom: 1px solid #ddd;
+}
+
+.subsection {
+    margin: 16px 0;
+    border-bottom: 2px solid #CCC;
 }
 
 .bar-container {
@@ -94,7 +131,266 @@ section {
 
 .bar-fill {
     width: 4px;
-    height: 0%;
+    height: 0;
     background-color: #7C9;
     border-radius: 16px;
+}
+
+.pfp {
+    width: 256px;
+    height: 256px;
+    margin-right: 32px;
+}
+#home {
+    display: flex;          /* Use Flexbox */
+    flex-direction: row;   /* Align children in a row */
+    justify-content: flex-start; /* Align children to the start (left) */
+}
+.hexagon {
+    position: relative;
+    width: 100px;
+    height: 55px;
+    background-color: #3498db;
+    margin: 50px auto;
+  }
+
+  .hexagon:before, .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 71px; /* Adjust width for better alignment */
+    height: 71px;
+    background-color: #3498db;
+    border-radius: 50%;
+  }
+
+  .hexagon:before {
+    top: -36px; /* Adjust top to fit the shape */
+    left: 15px; /* Adjust left to center the top */
+  }
+
+  .hexagon:after {
+    bottom: -36px;
+    left: 15px;
+  }
+  .image-section {
+      position: relative;
+      min-width: 192px;
+      margin: 0 32px;
+    }
+
+    .diagonal-image {
+      position: absolute;
+      opacity: 0;
+      width: 130px;
+      height: 150px;
+      transition: opacity 1s ease;
+    }
+
+    #image1 {
+      top: 0;
+      left: 0;
+      transition-delay: 0.2s; /* No delay for the first image */
+    }
+
+    #image2 {
+      top: 120px;
+      left: 70px;
+      transition-delay: 0.4s; /* 200ms delay for the second image */
+    }
+
+    .diagonal-image.active {
+      opacity: 1;
+    }
+
+    .typewriter {
+      font-family: monospace;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid black; /* Cursor */
+      width: 0;
+      animation: typing 2s steps(30) forwards, blink-cursor 0.25s step-end 2s, cursor-off 1s forwards 2s;
+/*      animation: typing 4s steps(10) forwards, blink-cursor 0.75s step-end infinite;*/
+    }
+
+    /* Typing effect */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 1000px; /* 7 characters: "<Text>" */
+      }
+    }
+
+    /* Blinking cursor */
+    @keyframes blink-cursor {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: black;
+      }
+    }
+    @keyframes cursor-off {
+      to {
+        border-color: transparent;
+      }
+    }
+
+    .space-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-left: 32px;
+        gap: 16px
+    }
+
+    .details {
+        margin-left: 32px;
+    }
+
+    .coursework {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 0;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #DDFFDD;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Elevation shadow */
+    }
+
+    .coursework > * {
+        margin: 4px;
+        font-family: Calibri, sans-serif;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 1px;
+    }
+
+    .coursework > *:hover {
+        text-decoration-thickness: 2px;
+        font-weight: 700;
+    }
+
+    .gt-img {
+        width: 230px;
+        height: 256px;
+        margin-right: 64px;
+    }
+
+    .experience-ta {
+        padding-bottom: 32px;
+        font-family: Calibri, sans-serif;
+    }
+
+    .ta-role-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    .ta-roles {
+        width: 640px;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .ta-roles > * {
+        font-family: Calibri, sans-serif;
+        display: flex;
+        flex-direction: row;
+        padding: 8px;
+        background: #FFF;
+        border-radius: 8px;
+        margin: 8px 0;
+    }
+
+.detail-img {
+    max-width: 64px;
+    max-height: 64px;
+    padding: 4px
+}
+
+.sf-img {
+    width: 320px;
+    height: 224px;
+
+}
+
+.sf-roles {
+    gap: 16px;
+}
+
+.sf-roles > * {
+    font-family: Calibri, sans-serif;
+    padding: 8px;
+    background: #FFF;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.projects-list > * {
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-img {
+    width: 256px;
+    height: 288px;
+    border-bottom-left-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+.project-caption {
+    padding: 16px 64px;
+    height: 288px;
+    background-color: #FFF;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+ul.project-details {
+    margin-top: 16px;
+}
+
+ul.project-details li {
+    margin-top: 8px;
+    font-size: 18px;
+    font-family: Calibri, sans-serif;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+.contact-info {
+    display: inline-block;
+    width: auto;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+.contact-info > *:hover {
+    text-decoration-thickness: 2px;
+    font-weight: 600;
+}
+
+.contact-info {
+    margin-top: 16px
+}
+
+.contact-info > * {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    align-items: center;
 }

@@ -24,39 +24,33 @@ const totalHeight = sections.scrollHeight - sections.clientHeight;
 sections.addEventListener('scroll', () => {
     let progress = sections.scrollTop / totalHeight;
     if (progress >= 1) progress = 0.9999;
-    for (let i = 0; i < bars.length; i++)
-    bars[i].style.height = Math.min((progress * (bars.length + 1)- i) * 100, 100) + '%'
+    console.log(progress);
+    bars[0].style.height = Math.min(progress * 2000/3, 100) + '%'
+    bars[1].style.height = Math.min((progress - 0.15) * 1000, 100) + '%'
+    bars[2].style.height = Math.min((progress - 0.25) * 500/3, 100) + '%'
     console.log(progress)
-    reselect(Math.floor(progress * tocItems.length));
+    if (progress < 0.15) reselect(0)
+    else if(progress < 0.3) reselect(1)
+    else if(progress < 0.9) reselect(2)
+    else reselect(3)
 });
+const images = document.querySelectorAll('.diagonal-image');
 
-console.log(`${scrollX}, ${scrollY}`);
-//document.querySelector('section').addEventListener('scroll', () => {
-//    console.log("scrolling ... ")
-//    let current = '';
-//
-//    sections.forEach(section => {
-//        const sectionTop = section.offsetTop;
-//        const sectionHeight = section.clientHeight;
-//        if (scrollY >= sectionTop - sectionHeight / 3) {
-//            current = section.getAttribute('id');
-//        }
-//    });
-//    console.log("current = " + current);
-//
-//    tocItems.forEach(item => {
-//        item.classList.remove('active');
-//        if (item.getAttribute('href') === `#${current}`) {
-//            item.classList.add('active');
-//        }
-//    });
-//});
-// Smooth scrolling when clicking TOC links
-//tocItems.forEach(item => {
-//    item.addEventListener('click', function(e) {
-//        e.preventDefault();
-//        document.querySelector(this.getAttribute('href')).scrollIntoView({
-//            behavior: 'smooth'
-//        });
-//    });
-//});
+const options = {
+  root: null, // Use the viewport as the root
+  threshold: 0.1, // Trigger when 10% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}, options);
+
+images.forEach(image => {
+  observer.observe(image);
+});
