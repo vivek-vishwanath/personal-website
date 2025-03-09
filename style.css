@@ -52,7 +52,7 @@ h3 {
 }
 
 /* Left Tab (TOC) */
-.toc {
+.left-tab {
     width: 20%;
     min-width: 192px;
     max-width: 256px;
@@ -63,6 +63,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 64px;
 }
 
 .toc-item {
@@ -81,7 +82,7 @@ h3 {
 }
 
 .toc-item:hover {
-    background-color: #ddd;
+    background-color: #bbb;
 }
 
 .toc-item.active {
@@ -369,19 +370,18 @@ ul.project-details li {
 }
 
 .contact-icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 16px;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    margin: 4px;
 }
-.contact-info {
-    display: inline-block;
-    width: auto;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1px;
-}
-.contact-info > *:hover {
-    text-decoration-thickness: 2px;
-    font-weight: 600;
+
+.contact-icon:hover {
+    width: 42px;
+    height: 42px;
+    background-color: #6B8;
+    border-radius: 20%;
+    margin: 1px;
 }
 
 .contact-info {
@@ -393,4 +393,28 @@ ul.project-details li {
     flex-direction: row;
     padding: 4px;
     align-items: center;
+}
+
+.social-media-tab {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    margin: 32px;
+    background: #CFE;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.linkedin {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 16px;
+}
+
+.linkedin:hover {
+    width: 50px;
+    height: 50px;
 }
