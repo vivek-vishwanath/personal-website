@@ -292,7 +292,7 @@ section {
     .ta-role-header {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         font-weight: 600;
     }
 
