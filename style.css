@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 42px;
     padding-top: 16px;
     font-weight: normal;
 }
@@ -259,26 +259,21 @@ section {
 
     .coursework {
         display: flex;
-        flex-direction: column;
-        margin: 8px 0;
-        padding: 16px;
-        border-radius: 8px;
-        background-color: #DDFFDD;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Elevation shadow */
+        flex-wrap: wrap;
+        gap: 8px; /* Spacing between rectangles */
+        max-width: 100%; /* Adjust parent width as needed */
+        padding: 10px;
     }
 
-    .coursework > * {
-        margin: 4px;
-        font-family: Calibri, sans-serif;
-        text-underline-offset: 4px;
-        text-decoration-thickness: 1px;
-    }
-
-    .coursework > *:hover {
-        text-decoration-thickness: 2px;
-        font-weight: 700;
-    }
-
+ .coursework > * {
+     position: relative;
+     border-radius: 12px;
+     background-color: #6CA;
+     padding: 12px;
+     transition: background-color 0.3s ease;
+     font-family: Calibri, serif;
+     font-size: 20px;
+ }
     .gt-img {
         width: 230px;
         height: 256px;
@@ -418,3 +413,78 @@ ul.project-details li {
     width: 50px;
     height: 50px;
 }
+
+.education-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.education-icon {
+    width: 256px;
+    height: 288px;
+    margin: 0 16px 64px;
+    justify-self: center;
+}
+
+.light-table {
+    row-gap: 16px;
+}
+
+.light-table > * {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Adjust spacing */
+    align-items: center;
+    margin: 16px 0;
+}
+
+.light-table > * > * {
+    font-family: Calibri, sans-serif;
+    font-size: 30px;
+}
+
+.light-table > * > *:not(:last-child)::after {
+    content: "|"; /* Divider symbol */
+    font-weight: normal;
+    margin-left: 10px;
+    color: gray; /* Customize color */
+}
+
+.light-table > * > :first-child {
+    font-weight: bold;
+}
+
+.sticky-note {
+    width: 200px;
+    height: 200px;
+    background-color: #ffeb3b;
+    position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 80% 100%, 0 100%);
+}
+
+.sticky-note::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotate(180deg);
+}
+/*.sticky-note::before {*/
+/*    content: "";*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    background-color: rgba(0, 0, 0, 0.1);*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    left: 10px;*/
+/*    border-radius: 50%;*/
+/*    z-index: -1;*/
+/*}*/
