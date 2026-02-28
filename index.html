@@ -3,351 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Vivek Vishwanath | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-<body>
-<div class="container">
-    <!-- Left Tab (TOC) -->
-    <nav class="left-tab">
-        <div class="toc">
-            <div><a href="#home" class="toc-item">Home</a></div>
-            <div class="bar-container">
-                <div class="bar-empty">
-                    <div class="bar-fill"></div>
-                </div>
+<body class="dark-theme">
+    <nav class="sidebar">
+        <div class="progress-container">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="main-progress"></div>
             </div>
-            <div><a href="#education" class="toc-item">Education</a></div>
-            <div class="bar-container">
-                <div class="bar-empty">
-                    <div class="bar-fill"></div>
-                </div>
-            </div>
-            <div><a href="#experience" class="toc-item">Experience</a></div>
-            <div class="bar-container">
-                <div class="bar-empty">
-                    <div class="bar-fill"></div>
-                </div>
-            </div>
-            <div><a href="#projects" class="toc-item">Projects</a></div>
-        </div>
-        <div class="social-media-tab">
-            <a href="mailto:vivek.vishwanath27@gmail.com">
-                <img src="img/email.png" alt="Mail" class="contact-icon">
-            </a>
-            <a href="https://www.linkedin.com/in/vivek-vishwanath1">
-                <img src="img/linkedin.png" alt="Mail" class="contact-icon linkedin">
-            </a>
-            <a href="https://www.github.com/vivek-vishwanath">
-                <img src="img/github.png" alt="Mail" class="contact-icon">
-            </a>
+            <ul class="nav-links-vertical">
+                <li class="nav-item" data-section="home">
+                    <div class="nav-dot"></div>
+                    <span class="nav-label">Home</span>
+                </li>
+                <li class="nav-item" data-section="experience">
+                    <div class="nav-dot"></div>
+                    <span class="nav-label">Experience</span>
+                </li>
+                <li class="nav-item" data-section="projects">
+                    <div class="nav-dot"></div>
+                    <span class="nav-label">Projects</span>
+                </li>
+                <li class="nav-item" data-section="skills">
+                    <div class="nav-dot"></div>
+                    <span class="nav-label">Skills</span>
+                </li>
+                <li class="nav-item" data-section="contact">
+                    <div class="nav-dot"></div>
+                    <span class="nav-label">Contact</span>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="main-content" id="start">
-        <div class="title-container">
-            <div class="title typewriter">&lt;Vivek Vishwanath/&gt;</div>
+    <header id="home" class="home-combined">
+        <div class="container">
+            <div class="home-top">
+                <div class="hero-image reveal">
+                    <img src="img/pfp-2025.png" alt="Vivek Vishwanath">
+                </div>
+                <div class="hero-text reveal">
+                    <h1>Vivek Vishwanath</h1>
+                    <h2>B.S./M.S. Computer Science @ Georgia Tech</h2>
+                    <p class="hero-intro">Software Engineer Intern at State Farm | Instructor for Intro to Operating Systems | Researcher in Quantum Computing</p>
+                    <div class="about-integrated reveal">
+                        <p>Pursuing a combined B.S./M.S. in Computer Science (4.0 GPA) with a focus on AI and Systems. I thrive in building high-performance, scalable software—from quantum simulators to ML-powered grading infrastructure.</p>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn primary">Get in Touch</a>
+                        <a href="Vivek_Vishwanath.pdf" target="_blank" class="btn secondary">View Resume</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <section id="home">
-            <img src="img/pfp-2024.png" alt="Profile Picture" class="pfp">
-            <div class="statement">
-                <div>
-                    <h1>About Me</h1>
-                    <h3>I am a candidate for bachelors of science in computer science at the College of Computing in
-                        Georgia Tech. My concentration and interests are in designing systems and architecture. Check
-                        out my work/research experiences and projects below, and feel free to contact or connect with
-                        me.</h3>
-                    <!--                        <div class="contact-info">-->
-                    <!--                            <a href="mailto:vivek.vishwanath27@gmail.com">-->
-                    <!--                                <img src="img/email.png" alt="Mail" class="contact-icon">-->
-                    <!--                                <div class="contact-link">vivek.vishwanath27@gmail.com</div>-->
-                    <!--                            </a>-->
-                    <!--                            <a href="https://www.linkedin.com/in/vivek-vishwanath1">-->
-                    <!--                                <img src="img/linkedin.png" alt="Mail" class="contact-icon">-->
-                    <!--                                <div class="contact-link">linkedin.com/vivek-vishwanath1</div>-->
-                    <!--                            </a>-->
-                    <!--                            <a href="https://www.github.com/vivek-vishwanath">-->
-                    <!--                                <img src="img/github.png" alt="Mail" class="contact-icon">-->
-                    <!--                                <div class="contact-link">github.com/vivek-vishwanath</div>-->
-                    <!--                            </a>-->
-                    <!--                        </div>-->
-                </div>
-                <div class="image-section">
-                    <img src="img/hexagon-1.png" class="diagonal-image" id="image1" alt="Image 1">
-                    <img src="img/hexagon-2.png" class="diagonal-image" id="image2" alt="Image 2">
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <section id="experience" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title reveal">Experience</h2>
+            <div class="timeline">
+                <div class="experience-card reveal">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/sf.png" alt="State Farm">
+                        </div>
+                        <div class="exp-title">
+                            <h3>Software Engineer Intern</h3>
+                            <h4>State Farm - Life Insurance | May 2025 – August 2025</h4>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Migrated a backend Spring Boot service into a serverless Python application (using FastAPI, Pydantic) on AWS Lambda, reducing API latency by 40%.</li>
+                        <li>Containerized Python microservice with Docker & published prod images to Amazon ECR, orchestrating workloads via Amazon ECS (Fargate) for horizontally scalable execution.</li>
+                        <li>Configured AWS ECS to spin up Docker containers & exposed REST endpoints to React (S3) frontend via API Gateway, serving 100K+ requests monthly.</li>
+                        <li>Cut deployment time by 95%+ by building a GitLab CI/CD pipeline & automating 200+ unit & integration tests.</li>
+                    </ul>
                 </div>
 
-            </div>
-        </section>
-        <section id="education">
-            <div class="education-row">
-                <img src="img/hexagon-1.png" class="education-icon" id="image3" alt="Image 1">
-                <div>
-                    <h1>Georgia Institute of Technology</h1>
-                    <div class="details">
-                        <div class="light-table">
-                            <div>
-                                <div>Degree</div>
-                                <div>B.S. in Computer Science</div>
-                                <div>M.S. in Computing Systems</div>
-                            </div>
-                            <div>
-                                <div>Start Date</div>
-                                <div>August 2023</div>
-                            </div>
-                            <div>
-                                <div>Graduation Date</div>
-                                <div>December 2025 (B.S.)</div>
-                                <div>December 2026 (M.S.)</div>
-                            </div>
-                            <div>
-                                <div>Overall GPA</div>
-                                <div>3.91</div>
-                            </div>
+                <div class="experience-card reveal">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/hexagon-1.png" alt="Georgia Tech">
                         </div>
-                        <h3 style="font-weight: normal; font-size: xx-large">Relevant Coursework</h3>
-                        <div class="coursework">
-                            <div>Operating Systems</div>
-                            <div>Systems & Networks</div>
-                            <div>Advanced Algorithm Design</div>
-                            <div>Discrete Math</div>
-                            <div>Linear Algebra</div>
-                            <div>Differential Equations</div>
-                            <div>Applied Combinatorics</div>
-                            <div>Computer Architecture</div>
-                            <div>Data Structures & Algorithms</div>
+                        <div class="exp-title">
+                            <h3>Instructor for Introduction to Operating Systems</h3>
+                            <h4>Georgia Tech | August 2024 – Present</h4>
                         </div>
                     </div>
+                    <ul class="exp-bullets">
+                        <li>Built and deployed automated grading infrastructure (JUnit, pytest) backing a production backend system, executing 760K+ test runs across 2,000+ students.</li>
+                        <li>Standardized and fixed CI pipelines (GitHub Actions, Gradle) across 25+ repos (150K+ LOC).</li>
+                        <li>Led weekly lectures with 100+ students teaching Networking Protocols, Caching, Virtual Memory, and Pipelining.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-        <section id="experience">
-            <h1>Experience</h1>
-            <div class="subsection" style="padding-top: 32px">
-                    <div>
-                        <h2>Head Teaching Assistant</h2>
-                        <div class="light-table">
-                            <div>
-                                <div>Course</div>
-                                <div>Computer Systems & Networks</div>
-                                <div>CS 2200</div>
-                            </div>
-                            <div>
-                                <div>Instructors</div>
-                                <div>Dr. Umakishore Ramachandran</div>
-                                <div>Dr. Alexandros Daglis</div>
-                                <div>Mr. Anirudh Sarma</div>
-                            </div>
-                            <div>
-                                <div>Term</div>
-                                <div>Spring 2025</div>
-                                <div>January 2025 - May 2025</div>
-                            </div>
-                        </div>
-                        <div class="experience-ta">
-                            <h3 class="ta-role-header">Responsibilities</h3>
-                            <div class="sticky-note">
-                                Directed logistics for 3 Professors, 30+ TAs, and 500+ students.
-                            </div>
-                            <div>
-                                <div class="ta-roles">
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Managed logistics for 3 professors, 30+ TAs, & 500+ students</div>
-                                    </div>
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Manually graded homeworks, projects, and exams for 30+ students every
-                                            week
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="ta-roles">
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Developed and debugged autograder for project to design a pipelined
-                                            processor using a circuit simulator in JavaFX.
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Held 3 to 6 office hours weekly to explain concepts and debug projects for
-                                            students
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="subsection" style="padding-top: 32px">
-                <div class="left-row">
-                    <!--                        <img src="img/hexagon-1.png" alt="" class="gt-img">-->
-                    <div>
-                        <h2>College of Computing @ Georgia Tech</h2>
-                        <h3><span style="font-weight: 700">Position: </span>Teaching Assistant (TA)</h3>
-                        <h3><span style="font-weight: 700">Course: </span>Computer Systems & Networks (CS 2200)</h3>
-                        <h3><span style="font-weight: 700">Instructor: </span>Prof. Daniel Forsyth</h3>
-                        <div class="experience-ta">
-                            <h3 class="ta-role-header">Responsibilities</h3>
-                            <div>
-                                <div class="ta-roles">
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Lectured 2 hr weekly to class of 50+ students on: processor design,
-                                            pipelines, scheduling, virtual memory, & networking
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Manually graded homeworks, projects, and exams for 30+ students every
-                                            week
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="ta-roles">
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Developed and debugged autograder for project to design a pipelined
-                                            processor using a circuit simulator in JavaFX.
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="img/user.png" alt="" class="detail-img"/>
-                                        <div>Held 3 to 6 office hours weekly to explain concepts and debug projects for
-                                            students
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="subsection" style="padding-top: 32px">
-                <div class="left-row">
-                    <img src="img/sf.png" alt="" class="sf-img">
-                    <div>
-                        <h2>State Farm Insurance</h2>
-                        <h3><span style="font-weight: 700">Position: </span>Software Engineering Intern (June 2022 -
-                            August 2024)</h3>
-                        <h3><span style="font-weight: 700">Skills & Tools: </span>Docker, GitLab, Python, AWS Lambda,
-                            ReactJS, Java, Spring Boot, CI/CD Pipeline, AWS ECR</h3>
-                        <div class="experience-ta">
-                            <h3 class="ta-role-header">Projects & Responsiblities</h3>
-                            <div>
-                                <div style="font-size: 20px"><span style="font-weight: 700">Team: </span>Life Agency
-                                    Compensation
-                                </div>
-                                <div class="sf-roles">
-                                    <div>
-                                        <div>Migrated on-prem Spring Boot app to python to deploy on AWS Lambda. Exposed
-                                            to React frontend (on S3) via API Gateway
-                                            <br>Dockerized and built GitLab CI/CD pipeline from scratch to streamline
-                                            deployment to AWS ECR (registry)
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>Investigated solutions to modernize 20K+ lines of mainframe code from IBM’s
-                                            HLASM (Assembler) to COBOL & Java
-                                            <br>Reached out and met with 5+ external vendors & documented reports on
-                                            scale, suitability, pricing
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="font-size: 20px"><span style="font-weight: 700">Team: </span>Property &
-                                    Casualty Claims
-                                </div>
-                                <div class="sf-roles">
-                                    <div>
-                                        <div>Researched and designed modern UI frontend for static & dynamic internal
-                                            websites using Hugo, ReactJS
-                                            <br>Migrated 30+ email templates to Jinja (web templating engine) using
-                                            Python/HTML
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="subsection" style="padding-top: 32px; border-bottom: transparent">
-                <div class="left-row">
-                    <img src="img/hexagon-1.png" alt="" class="gt-img">
-                    <div>
-                        <h2>Center for Research into Novel Computing Hierarchies (CRNCH) Lab</h2>
-                        <h3><span style="font-weight: 700">Position: </span>Undergraduate Research Assistant</h3>
-                        <h3><span style="font-weight: 700">Research Topic: </span>Quantum Compilers</h3>
-                        <h3><span style="font-weight: 700">Advisors: </span><a href="https://www.conte.us/">Dr. Thomas
-                            M. Conte</a>, <a href="https://austinjadams.com/">Austin J. Adams</a></h3>
-                        <a style="font-size: 20px; padding: 16px 0" href="https://qwerty.cc.gatech.edu">https://qwerty.cc.gatech.edu</a>
-                        <div class="experience-ta">
-                            <h3 class="ta-role-header">Projects & Responsibilities</h3>
-                            <div>
-                                <div class="sf-roles">
-                                    <div>
-                                        <div><span style="font-weight: 700; font-size: 16px">Project: </span>Developed
-                                            an interactive <a href="https://qwerty.ausb.in">Quantum Playground</a> to
-                                            simulate execution of a novel, expressive Quantum Programming Language
-                                        </div>
-                                    </div>
-                                    <div>Designed frontend web editor in Typescript with automatic linting & dockerized
-                                        quantum compiler & hosted on AWS machine
-                                        <br>Drafted IaC config files in Ansible to configure Nginx websocket to serve
-                                        code execution requests from the frontend
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <h1>Personal Projects</h1>
-            <div class="projects-list">
-                <div>
-                    <img src="img/election-map.png" alt="GA Election Map" class="project-img">
-                    <div class="project-caption">
-                        <a href="https://live-election-map.web.app" style="font-size: 36px">Live Election Map</a>
-                        <ul class="project-details">
-                            <li>Interactive web app to render live results map for ongoing/past elections</li>
-                            <li>Implemented python web scraper with Selenium to collect results of approximately 4
-                                million votes across almost 3000 election precincts
-                            </li>
-                            <li>Cached election data in Firestore in a customized compressed data format</li>
-                            <li>Rendered webpage with vanilla JS and 3000+ GEOJSON files using Leaflet API</li>
-                        </ul>
 
+                <div class="experience-card reveal">
+                    <div class="exp-header">
+                        <div class="exp-logo">
+                            <img src="img/hexagon-2.png" alt="Georgia Tech Research">
+                        </div>
+                        <div class="exp-title">
+                            <h3>Research Assistant</h3>
+                            <h4>Georgia Tech - Quantum Computing Lab | November 2023 – Present</h4>
+                        </div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Created Quantum Playground, a browser-based interactive quantum computing environment for researchers to safely execute quantum code.</li>
+                        <li>Deployed backend on AWS EC2 with Ansible automation, Nginx load balancing, and Linux server configuration, handling 20K+ concurrent requests with high availability via AWS CloudWatch.</li>
+                        <li>Built an interactive Rust-based REPL shell via PyO3, using memory-efficient Qubit encodings to educate researchers on traditional quantum algorithms.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="img/election-map.png" alt="Live Election Tracker">
+                    </div>
+                    <div class="project-info">
+                        <h3>Live Election Tracker</h3>
+                        <p>Full-stack election dashboard mapping 3K+ precincts. Powered by Selenium scrapers and Redis caching, serving 2M+ daily visitors.</p>
+                        <div class="project-tags">
+                            <span>Python (Flask)</span>
+                            <span>Redis</span>
+                            <span>React</span>
+                            <span>AWS</span>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <img src="img/discord.png" alt="Discord Bot Icon" class="project-img" style="height: 256px">
-                    <div class="project-caption" style="height: 256px">
-                        <div style="font-size: 36px">Quiz Bowl Discord Bot</div>
-                        <ul class="project-details">
-                            <li>Chat bot on Discord to simulate quiz bowl/trivia to help MS/HS/college students practice
-                                for competitions
-                            </li>
-                            <li>Asynchronously sends out questions from json of 100k+ entries, and listens for “buzzes”
-                                by clients/users
-                            </li>
-                            <li>Validates responses through RegEx pattern matching and GPT-4o prompt completions</li>
-                            <li>Tools: Python, Cyberduck, AWS EC2, Discord API</li>
-                        </ul>
 
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="img/grad-git.png" alt="Prerequisite Chart Visualization">
+                    </div>
+                    <div class="project-info">
+                        <h3>Prerequisite Chart Visualization</h3>
+                        <p>Interactive graph-based tool for Georgia Tech's CS curriculum, mapping complex course dependencies into an intuitive flowchart for student degree planning.</p>
+                        <div class="project-tags">
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>D3.js</span>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <a href="https://github.com/vivek-vishwanath/prereq-chart" target="_blank" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-info">
+                        <h3>CheckPoint Grading</h3>
+                        <p>Architected 15+ containerized autograding services with isolated sandboxes and ML-based plagiarism detection. Processing 200K+ submissions/year.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>TypeScript</span>
+                            <span>Docker</span>
+                            <span>Java</span>
+                            <span>ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-info">
+                        <h3>Hardware Debugger</h3>
+                        <p>Constructed compiler toolchain and GDB clone for Circuit Simulator. Includes IRQ handlers and memory-protection mechanisms.</p>
+                        <div class="project-tags">
+                            <span>C/C++</span>
+                            <span>Rust</span>
+                            <span>MIPS</span>
+                            <span>Multithreading</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-</div>
-<script src="script.js"></script>
+        </div>
+    </section>
+
+    <section id="skills" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title reveal">Technical Expertise</h2>
+            <div class="skills-hex-large reveal">
+                <!-- Row 1 -->
+                <div class="hex empty"></div>
+                <div class="hex empty"></div>
+                <div class="hex empty"></div>
+                <div class="hex" title="Kubernetes"><i class="devicon-kubernetes-plain"></i><span class="hex-label">K8s</span></div>
+                <div class="hex" title="Docker"><i class="devicon-docker-plain"></i><span class="hex-label">Docker</span></div>
+                <div class="hex" title="Rust"><i class="devicon-rust-plain"></i><span class="hex-label">Rust</span></div>
+
+                <!-- Row 2 -->
+                <div class="hex empty"></div>
+                <div class="hex empty"></div>
+                <div class="hex" title="Node.js"><i class="devicon-nodejs-plain"></i><span class="hex-label">Node.js</span></div>
+                <div class="hex" title="Terraform"><i class="devicon-terraform-plain"></i><span class="hex-label">Terraform</span></div>
+                <div class="hex" title="Nginx"><i class="devicon-nginx-original"></i><span class="hex-label">Nginx</span></div>
+                <div class="hex" title="Git"><i class="devicon-git-plain"></i><span class="hex-label">Git</span></div>
+                <div class="hex" title="C/C++"><i class="devicon-cplusplus-plain"></i><span class="hex-label">C/C++</span></div>
+
+                <!-- Row 3 -->
+                <div class="hex empty"></div>
+                <div class="hex" title="JS/TS"><i class="devicon-typescript-plain"></i><span class="hex-label">JS/TS</span></div>
+                <div class="hex" title="Go"><i class="devicon-go-plain"></i><span class="hex-label">Go</span></div>
+                <div class="hex" title="AWS"><i class="devicon-amazonwebservices-plain-wordmark"></i><span class="hex-label">AWS</span></div>
+                <div class="hex" title="Linux"><i class="devicon-linux-plain"></i><span class="hex-label">Linux</span></div>
+                <div class="hex empty"></div>
+                <div class="hex empty"></div>
+
+
+
+                <!-- Row 4 -->
+                <div class="hex empty"></div>
+                <div class="hex" title="React"><i class="devicon-react-original"></i><span class="hex-label">React</span></div>
+                <div class="hex" title="Java"><i class="devicon-java-plain"></i><span class="hex-label">Java</span></div>
+                <div class="hex" title="Bash"><i class="devicon-bash-plain"></i><span class="hex-label">Bash</span></div>
+                <div class="hex" title="SSH"><i class="devicon-ssh-plain"></i><span class="hex-label">SSH</span></div>
+                <div class="hex empty"></div>
+
+                <!-- Row 5 -->
+                <div class="hex empty"></div>
+                <div class="hex" title="Flutter"><i class="devicon-flutter-plain"></i><span class="hex-label">Flutter</span></div>
+                <div class="hex" title="Kotlin"><i class="devicon-kotlin-plain"></i><span class="hex-label">Kotlin</span></div>
+                <div class="hex" title="Python"><i class="devicon-python-plain"></i><span class="hex-label">Python</span></div>
+                <div class="hex empty"></div>
+                <div class="hex empty"></div>
+                <div class="hex empty"></div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <div class="contact-content reveal">
+                <p>Feel free to reach out for collaboration or opportunities!</p>
+                <div class="contact-links-compact">
+                    <a href="mailto:vivek.vishwanath27@gmail.com" class="contact-btn" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/vivek-vishwanath1" target="_blank" class="contact-btn" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vivek-vishwanath" target="_blank" class="contact-btn" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Vivek Vishwanath</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

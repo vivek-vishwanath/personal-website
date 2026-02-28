@@ -1,53 +1,77 @@
-// Highlight the current section in the TOC
-const tocItems = document.querySelectorAll('.toc-item');
+document.addEventListener('DOMContentLoaded', () => {
+    // Scroll Reveal Animation Logic
+    const revealElements = document.querySelectorAll('.reveal');
 
-let selectedItem = 0;
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        revealElements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add('active');
+            }
+        });
+    };
 
-function reselect(i) {
-    selectedItem = i
-    tocItems.forEach(b => b.style.backgroundColor = "#F8F8F8")
-    tocItems[i].style.backgroundColor = "#ABEFEF"
-}
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Run once on load
 
-reselect(0)
-
-tocItems.forEach((button, key, _) => {
-    button.addEventListener('click', function() {
-        reselect(key);
+    // Smooth scroll for nav items
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const sectionId = item.getAttribute('data-section');
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                e.preventDefault();
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-});
-const sections = document.querySelector('.main-content');
-const bars = document.querySelectorAll('.bar-fill')
 
-const totalHeight = sections.scrollHeight - sections.clientHeight;
-sections.addEventListener('scroll', () => {
-    let progress = sections.scrollTop / totalHeight;
-    if (progress >= 1) progress = 0.9999;
-    bars[0].style.height = Math.min(progress * 2000/3, 100) + '%'
-    bars[1].style.height = Math.min((progress - 0.15) * 1000, 100) + '%'
-    bars[2].style.height = Math.min((progress - 0.25) * 500/3, 100) + '%'
-    if (progress < 0.15) reselect(0)
-    else if(progress < 0.3) reselect(1)
-    else if(progress < 0.9) reselect(2)
-    else reselect(3)
-});
-const images = document.querySelectorAll('.diagonal-image');
+    // Progress Bar and Active Section Logic
+    const mainProgress = document.getElementById('main-progress');
+    const sections = ['home', 'experience', 'projects', 'skills', 'contact'];
+    
+    const updateProgress = () => {
+        const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollCurrent = window.scrollY;
+        const scrollPercent = (scrollCurrent / scrollTotal) * 100;
+        
+        if (mainProgress) {
+            mainProgress.style.height = `${scrollPercent}%`;
+        }
 
-const options = {
-  root: null, // Use the viewport as the root
-  threshold: 0.1, // Trigger when 10% of the section is visible
-};
+        // Update active section
+        let currentSection = '';
+        sections.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                // If section is in view (top is above middle and bottom is below middle)
+                if (rect.top <= window.innerHeight / 2) {
+                    currentSection = id;
+                }
+            }
+        });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    } else {
-      entry.target.classList.remove('active');
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-section') === currentSection) {
+                item.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', updateProgress);
+    updateProgress(); // Run once on load
+
+    // Mobile adjustments (sidebar might be too wide on small screens)
+    if (window.innerWidth < 768) {
+        document.body.style.paddingLeft = '60px';
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar) sidebar.style.width = '60px';
     }
-  });
-}, options);
-
-images.forEach(image => {
-  observer.observe(image);
 });
